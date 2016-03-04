@@ -12,6 +12,5 @@ RUN apt-get clean && rm -r /var/lib/apt/lists/*
 
 VOLUME ["/app"]
 WORKDIR /app
-ENV TERM xterm
 
 ENTRYPOINT ["phpdoc"]
