@@ -1,4 +1,4 @@
-FROM mkenney/php-cli:latest
+FROM mkenney/php-cli:php5
 
 MAINTAINER Michael Kenney <mkenney@webbedlam.com>
 
