@@ -2,6 +2,8 @@
 
 The source repo contains a `phpdoc` script that wraps executing a docker container to execute [phpdoc](https://www.phpdoc.org/). The current directory is mounted into /src in the container and a wrapper script executes composer as a user who's `uid` and `gid` matches those properties on that directory. This way the documentation is written as the directory owner/group instead of root or a random user.
 
+Because this runs out of a Docker container, all source code input and the output location must be available within the current directory. Specifying files or directories from other locations on the system will not work. For example, `-f /some/file.php` would attempt to find the file inside the container instead of on the host.
+
 # SOURCE REPOSITORY
 
 * [mkenney/docker-phpdoc](https://github.com/mkenney/docker-phpdoc)
