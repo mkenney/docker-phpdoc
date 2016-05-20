@@ -3,7 +3,7 @@ FROM mkenney/php-base
 MAINTAINER Michael Kenney <mkenney@webbedlam.com>
 
 ##############################################################################
-# phpunit
+# phpdoc
 ##############################################################################
 
 RUN apt-get -q -y update \
