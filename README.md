@@ -1,3 +1,5 @@
+![PHP v7](https://img.shields.io/badge/PHP-v7.0.6-8892bf.svg) ![phpDocumentor v2](https://img.shields.io/badge/phpDocumentor-v2.8.5-8dd35f.svg) ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
+
 # Environment independent phpdocumentor script
 
 The source repo contains a `phpdoc` script that wraps executing a docker container to execute [phpdoc](https://www.phpdoc.org/). The current directory is mounted into /src in the container and a wrapper script executes composer as a user who's `uid` and `gid` matches those properties on that directory. This way the documentation is written as the directory owner/group instead of root or a random user.
