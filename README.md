@@ -1,4 +1,4 @@
-![PHP v7](https://img.shields.io/badge/PHP-v7.0.6-8892bf.svg) ![phpDocumentor v2](https://img.shields.io/badge/phpDocumentor-v2.8.5-8dd35f.svg) ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
+![PHP v5](https://img.shields.io/badge/PHP-v5.6.21-8892bf.svg) ![phpDocumentor v2](https://img.shields.io/badge/phpDocumentor-v2.8.5-8dd35f.svg) ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
 # Environment independent phpdocumentor script
 
