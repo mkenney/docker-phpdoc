@@ -1,12 +1,12 @@
 ![PHP v7](https://img.shields.io/badge/PHP-v7.0.6-8892bf.svg) ![phpDocumentor v2](https://img.shields.io/badge/phpDocumentor-v2.8.5-8dd35f.svg) ![MIT License](https://img.shields.io/github/license/mkenney/docker-phpdoc.svg) ![Docker pulls](https://img.shields.io/docker/pulls/mkenney/phpdoc.svg) ![Docker stars](https://img.shields.io/docker/stars/mkenney/phpdoc.svg) ![Github issues](https://img.shields.io/github/issues-raw/mkenney/docker-phpdoc.svg)
 
-# Environment independent phpdocumentor script
+# Environment independent phpDocumentor script
 
 The [source repo](https://github.com/mkenney/docker-phpdoc) contains a `phpdoc` script that wraps executing a docker container to execute [phpdoc](https://www.phpdoc.org/). The current directory is mounted into /src in the container and a wrapper script executes composer as a user who's `uid` and `gid` matches those properties on that directory. This way the documentation is written as the directory owner/group instead of root or a random user.
 
 Because this runs out of a Docker container, all source code input and the output location must be available within the current directory. Specifying files or directories from other locations on the system will not work. For example, `-f /some/file.php` would attempt to find the file inside the container instead of on the host.
 
-# SOURCE REPOSITORY
+# Source repository
 
 * [mkenney/docker-phpdoc](https://github.com/mkenney/docker-phpdoc)
 
