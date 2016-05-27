@@ -1,4 +1,4 @@
-#!/bin/env sh
+#!/usr/bin/env sh
 
 docker run --rm -t -i -v $(pwd):/src:rw mkenney/phpdoc $@
 
