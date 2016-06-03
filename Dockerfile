@@ -1,4 +1,4 @@
-FROM mkenney/php-base
+FROM mkenney/composer
 
 MAINTAINER Michael Kenney <mkenney@webbedlam.com>
 
@@ -6,10 +6,17 @@ MAINTAINER Michael Kenney <mkenney@webbedlam.com>
 # phpdoc
 ##############################################################################
 
-RUN apt-get -q -y update \
-    && apt-get -q -y install graphviz \
-    && pear channel-discover pear.phpdoc.org \
-    && pear install phpdoc/phpDocumentor \
-    && apt-get clean && rm -r /var/lib/apt/lists/*
+RUN set -x \
 
-ENTRYPOINT ["/as-user","/usr/local/bin/phpdoc"]
+    # Install additional required packages
+    && apk add --no-cache --repository "http://dl-cdn.alpinelinux.org/alpine/edge/testing" \
+        graphviz \
+        php7-common \
+        php7-ctype \
+        php7-dom \
+        php7-xml \
+
+    # Install phpdoc
+    && sudo -u dev /usr/local/bin/composer global require "phpdocumentor/phpdocumentor:2.*"
+
+ENTRYPOINT ["/as-user","/home/dev/.composer/vendor/bin/phpdoc"]
