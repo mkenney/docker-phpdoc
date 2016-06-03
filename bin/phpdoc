@@ -1,4 +1,8 @@
 #!/usr/bin/env sh
 
-docker run --rm -t -i -v $(pwd):/src:rw mkenney/phpdoc $@
-
+if [ "self-update" == "$1" ]; then
+    docker pull mkenney/php-base:php5
+    wget -nv -O $0 https://raw.githubusercontent.com/mkenney/docker-phpdoc/master/bin/phpdoc
+else
+    docker run --rm -t -i -v $(pwd):/src:rw mkenney/phpdoc $@
+fi
