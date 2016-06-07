@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 
-docker run --rm -t -i -v $(pwd):/src:rw mkenney/phpdoc $@
+docker run --rm -t -i -v $(pwd):/src:rw mkenney/phpdoc:tiny-dev $@
 
