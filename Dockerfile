@@ -12,4 +12,4 @@ RUN apt-get -q -y update \
     && pear install phpdoc/phpDocumentor \
     && apt-get clean && rm -r /var/lib/apt/lists/*
 
-ENTRYPOINT ["/as-user","/usr/local/bin/phpdoc"]
+ENTRYPOINT ["/run-as-user","/usr/local/bin/phpdoc"]
